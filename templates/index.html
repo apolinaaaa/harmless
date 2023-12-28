@@ -69,13 +69,19 @@
     <h2>Баллы: за первую игру {{user.answer1}}, за вторую игру {{user.answer2}}, за третью игру {{user.answer3}}</h2>
     <h2>Рекомендации:</h2>
     {% if user.answer < 10 %}
-        <h3>Вам нужно посетить сайт <a href="https://www.securitylab.ru/blog/personal/bezmaly/350620.php">securitylab</a></h3>
+        <h2>Вам нужно посетить сайт <a href="https://www.securitylab.ru/blog/personal/bezmaly/350620.php">securitylab</a></h2>
     {% endif %}
     {% if 10 <= user.answer <= 20 %}
-        <h3>У вас хороший результат, однако вы для расширения ваших знаний можете посетить сайт <a href="https://www.securitylab.ru/blog/personal/bezmaly/350620.php">securitylab</a></h3>
+        <h2>У вас хороший результат, однако для расширения ваших знаний вы можете посетить сайт <a href="https://www.securitylab.ru/blog/personal/bezmaly/350620.php">securitylab</a></h2>
     {% endif %}
     {% if user.answer > 20 %}
-        <h3>У вас отличный результат, можете для общего ознакомления перейти на сайт <a href="https://www.securitylab.ru/blog/personal/bezmaly/350620.php">securitylab</a></h3>
+        <h2>У вас отличный результат, можете для общего ознакомления перейти на сайт <a href="https://www.securitylab.ru/blog/personal/bezmaly/350620.php">securitylab</a></h2>
     {% endif %}
+</div>
+<div style="position:absolute; bottom:40px;">
+    <img src="/static/images/nao.png" width="140px" height="90px">
+</div>
+<div style="position:absolute; bottom:50px; right:100px">
+    <h2>По вопросам: help.harmless@yandex.ru</h2>
 </div>
 {% endblock %}
