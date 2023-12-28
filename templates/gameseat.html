@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Что? Где? Когда?
+{% endblock %}
+
+{% block body %}
+<div class="conteiner mt-5">
+  <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94"
+                 role="img"></svg>
+            <span class="fs-5"><- Выйти</span>
+        </a>
+
+        <h1 ><font size="10"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HARMLESS</font></h1>
+        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+            <a class="me-3 py-2 text-dark text-decoration-none" href="/tests/{{ id }}">Главная страница</a>
+        </nav>
+    </div>
+  <form method="post">
+      <h3>Сколько составил общий ущерб от преступлений с использованием компьютерных технологий в 2021 году в России?(подсчитали в RTM Group)</h3>
+      <h5>Варианты ответов:</h5>
+      <p>
+        <input type="radio" name="answer1" id="option11" value="1"> более 150 млрд рублей </input><br>
+        <input type="radio" name="answer1" id="option12" value="2"> менее 100 млрд рублей </input><br>
+        <input type="radio" name="answer1" id="option13" value="3"> более 200 млрд рублей </input><br>
+          <input type="radio" name="answer1" id="option14" value="4"> менее 50 млрд рублей </input><br>
+        </p>
+      <h3>К концу 2016 года каждые 40 секунд какая-то компания становилась жертвой программ-вымогателей. К 2021-му это время сократилось до скольких секунд</h3>
+      <h5>Варианты ответов:</h5>
+      <p>
+        <input type="radio" name="answer2" id="option21" value="1"> до 20 секунд </input><br>
+        <input type="radio" name="answer2" id="option22" value="2"> до 16 секунд </input><br>
+        <input type="radio" name="answer2" id="option23" value="3"> до 13 секунд </input><br>
+          <input type="radio" name="answer2" id="option24" value="4"> до 11 секунд </input><br>
+        </p>
+      <h3>Исследование Accenture Cost of Cybercrime Study 2019 года показывает, что 43% всех кибератак нацелены на малый бизнес. При этом только ...% небольших предприятий обеспечены надежной защитой. Сколько процентов небольших предприятий обеспечены надежной защитой?</h3>
+      <h5>Варианты ответов:</h5>
+      <p>
+        <input type="radio" name="answer3" id="option31" value="1"> 12 </input><br>
+        <input type="radio" name="answer3" id="option32" value="2"> 15 </input><br>
+        <input type="radio" name="answer3" id="option33" value="3"> 14 </input><br>
+          <input type="radio" name="answer3" id="option34" value="4"> 21 </input><br>
+        </p>
+      <h3>В какой стране насчитывается уже семь киберполигонов, где в виртуальной среде, которая повторяет типичную инфраструктуру организации, проводят профессиональную подготовку в сфере информационной безопасности?</h3>
+      <h5>Варианты ответов:</h5>
+      <p>
+        <input type="radio" name="answer4" id="option41" value="1"> Россия </input><br>
+        <input type="radio" name="answer4" id="option42" value="2"> США </input><br>
+        <input type="radio" name="answer4" id="option43" value="3"> Китай </input><br>
+          <input type="radio" name="answer4" id="option44" value="4"> Япония </input><br>
+        </p>
+      <h3> Мировые расходы на продукты и услуги в области информационной безопасности за период с 2017 по 2021 год совокупно превысили ... Сколько трлн долларов?</h3>
+      <h5>Варианты ответов:</h5>
+      <p>
+        <input type="radio" name="answer5" id="option51" value="1"> 1 </input><br>
+        <input type="radio" name="answer5" id="option52" value="2"> 2 </input><br>
+        <input type="radio" name="answer5" id="option53" value="3"> 3 </input><br>
+          <input type="radio" name="answer5" id="option54" value="4"> 4 </input><br>
+        </p>
+      <h3> Каждую минуту в мире происходит более скольки атак на устройства, подключенные к интернету в поисках уязвимостей в системах?</h3>
+      <h5>Варианты ответов:</h5>
+      <p>
+        <input type="radio" name="answer6" id="option61" value="1"> 2000000 </input><br>
+        <input type="radio" name="answer6" id="option62" value="2"> 2200000 </input><br>
+        <input type="radio" name="answer6" id="option63" value="3"> 1500000 </input><br>
+          <input type="radio" name="answer6" id="option64" value="4"> 1100000 </input><br>
+        </p>
+      <h3> Самым распространенным паролем в 2022 году был ...</h3>
+      <h5>Варианты ответов:</h5>
+      <p>
+        <input type="radio" name="answer7" id="option71" value="1"> 123456 </input><br>
+        <input type="radio" name="answer7" id="option72" value="2"> qwerty123 </input><br>
+        <input type="radio" name="answer7" id="option73" value="3"> qwerty1 </input><br>
+          <input type="radio" name="answer7" id="option74" value="4"> abcd123 </input><br>
+        </p>
+      <h3>Более 90% электронной почты - спам. Сколько процентов от них содержат вредоносный код?</h3>
+      <h5>Варианты ответов:</h5>
+      <p>
+        <input type="radio" name="answer8" id="option81" value="1"> 10,02 </input><br>
+        <input type="radio" name="answer8" id="option82" value="2"> 5,62 </input><br>
+        <input type="radio" name="answer8" id="option83" value="3"> 2,17 </input><br>
+          <input type="radio" name="answer8" id="option84" value="4"> 0,06 </input><br>
+        </p>
+      <h3>Хакеры какой российской группировки обрушили сайт Anonymous?</h3>
+      <h5>Варианты ответов:</h5>
+      <p>
+        <input type="radio" name="answer9" id="option91" value="1"> Killnet </input><br>
+        <input type="radio" name="answer9" id="option92" value="2"> Conti </input><br>
+        <input type="radio" name="answer9" id="option93" value="3"> Cozy Bear </input><br>
+          <input type="radio" name="answer9" id="option94" value="4"> DarkSide </input><br>
+        </p>
+      <h3>Какой самый массовый вирус десятилетия?</h3>
+      <h5>Варианты ответов:</h5>
+       <p>
+        <input type="radio" name="answer10" id="option101" value="1"> Byte Bandit </input><br>
+        <input type="radio" name="answer10" id="option102" value="2"> Stoned </input><br>
+        <input type="radio" name="answer10" id="option103" value="3"> Locky </input><br>
+          <input type="radio" name="answer10" id="option104" value="4"> WannaCry </input><br>
+        </p>
+      <h1><input type="submit" class="btn btn-success" value="Сохранить"></h1>
+    </form>
+</div>
+{% endblock %}

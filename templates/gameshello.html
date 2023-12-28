@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Алло. Кто это?
+{% endblock %}
+
+{% block body %}
+<div class="conteiner mt-5">
+  <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94"
+                 role="img"></svg>
+            <span class="fs-5"><- Выйти</span>
+        </a>
+
+        <h1 ><font size="10"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HARMLESS</font></h1>
+        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+            <a class="me-3 py-2 text-dark text-decoration-none" href="/tests/{{ id }}">Главная страница</a>
+        </nav>
+    </div>
+  <form method="post">
+      <h3>Здравствуйте! Я случайно перевёл вам деньги на карту, ошибся одной цифрой, отправьте мне деньги назад, пожалуйста... (В истории зачислений и списаний банка ничего не изменилось, сообщение о зачислении не приходило)</h3>
+      <p>
+          <input type="radio" name="answer1" id="option11" value="1"> Мошенник </input><br>
+        <input type="radio" name="answer1" id="option12" value="2"> Не мошенник </input><br>
+        </p>
+      <h3> Здравствуйте, с вашего счета пытаются списать средства. Чтобы я смог заблокировать вашу карту, и вы избежали потери средств, сообщите данные карты...</h3>
+      <p>
+        <input type="radio" name="answer2" id="option21" value="1"> Мошенник </input><br>
+        <input type="radio" name="answer2" id="option22" value="2"> Не мошенник </input><br>
+        </p>
+      <h3> Алло, здравствуйте, я из Главного Управления МВД России, старший следователь Васильев Василий Васильевич. Обращаю ваше внимание на то, что наш разговор будет записан и внесён в реестр досудебного расследования. Некий Петров Пётр Петрович представился вашим родственником и сообщил, что оформлял на вас доверенность. Чтобы уточнить данную информацию, сообщите мне ваши паспортные данные...</h3>
+      <p>
+        <input type="radio" name="answer3" id="option31" value="1"> Мошенник </input><br>
+        <input type="radio" name="answer3" id="option32" value="2"> Не мошенник </input><br>
+        </p>
+      <h3> Здравствуйте! Я ваша дальняя родственница из Перми. Хотела узнать, как у вас дела, как живёте. Мне ваш номер дала ваша бабушка...</h3>
+      <p>
+        <input type="radio" name="answer4" id="option41" value="1"> Мошенник </input><br>
+        <input type="radio" name="answer4" id="option42" value="2"> Не мошенник </input><br>
+        </p>
+      <h3> Добрый день! Предлагаем вам открыть микрозайм. У нас очень выгодные условия...</h3>
+      <p>
+        <input type="radio" name="answer5" id="option51" value="1"> Мошенник </input><br>
+        <input type="radio" name="answer5" id="option52" value="2"> Не мошенник </input><br>
+        </p>
+      <h3> Здравствуйте, вас беспокоят из полиции. На вашей карте замечена подозрительная активность. Это вы пытаетесь оформить кредит на сумму 100.000 рублей? Если нет, то чтобы обезопасить свои средства, предлагаем вам открыть счёт в Центробанке и перечислить на него все свои средства...</h3>
+      <p>
+        <input type="radio" name="answer6" id="option61" value="1"> Мошенник </input><br>
+        <input type="radio" name="answer6" id="option62" value="2"> Не мошенник </input><br>
+        </p>
+      <h3> Здравствуйте, ваш родственник попал в беду. Чтобы ему помочь, вам срочно необходимо отправить определённую сумму по номеру...</h3>
+      <p>
+        <input type="radio" name="answer7" id="option71" value="1"> Мошенник </input><br>
+        <input type="radio" name="answer7" id="option72" value="2"> Не мошенник </input><br>
+        </p>
+      <h3>Привет, я друг твоей мамы. У неё случилось горе, но телефон разрядился, поэтому она не может позвонить сама. Она попросила меня передать тебе, чобы ты отправил все её сбережения на номер ...</h3>
+      <p>
+        <input type="radio" name="answer8" id="option81" value="1"> Мошенник </input><br>
+        <input type="radio" name="answer8" id="option82" value="2"> Не мошенник </input><br>
+        </p>
+      <h3> Поздравляем! Вы выиграли в лотерее миллион рублей. Сообщите данные вашей карты, чтобы мы смогли отправить приз победителю!</h3>
+      <p>
+        <input type="radio" name="answer9" id="option91" value="1"> Мошенник </input><br>
+        <input type="radio" name="answer9" id="option92" value="2"> Не мошенник </input><br>
+        </p>
+      <h3> Алло, здравствуйте, это же вы занимаетесь ремонтом в квартирах? Нет? Извините, кажется я ошиблась...</h3>
+      <p>
+        <input type="radio" name="answer10" id="option101" value="1"> Мошенник </input><br>
+        <input type="radio" name="answer10" id="option102" value="2"> Не мошенник </input><br>
+        </p>
+      <h1><input type="submit" class="btn btn-success" value="Сохранить"></h1>
+    </form>
+</div>
+{% endblock %}

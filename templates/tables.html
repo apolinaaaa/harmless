@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Таблица лидеров
+{% endblock %}
+
+{% block body %}
+<div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"></svg>
+        <span class="fs-4"><- Выйти</span>
+      </a>
+      <h1 ><font size="10"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HARMLESS</font></h1>
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="me-3 py-2 text-dark text-decoration-none" href="/tests/{{ id }}">Главная страница</a>
+      </nav>
+    </div>
+<div class="conteiner mt-5">
+    <h1>Таблица лидеров</h1>
+    {% for elem in dannye  %}
+    <div class="alert alert-info">
+        <h2>{{elem.name2}} {{elem.name1}}</h2>
+        <b>Количество баллов: {{elem.answer1}} + {{elem.answer2}} + {{elem.answer3}} = {{ elem.answer }}</b>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

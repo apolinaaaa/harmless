@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block body %}
+<div class="conteiner mt-5">
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94"
+                 role="img"></svg>
+            <span class="fs-5"><- Выйти</span>
+        </a>
+
+        <h1 ><font size="10"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HARMLESS</font></h1>
+        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+            <a class="me-3 py-2 text-dark text-decoration-none" href="/dost/{{ id }}">Достижения</a>
+            <a class="me-3 py-2 text-dark text-decoration-none" href="/tables/{{ id }}">Лидеры</a>
+        </nav>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Алло. Кто это?</h4>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Вам будут представлены отрывки телефонного разговора. Ваша задача: определить, кем является человек, который звонит с незнакомого номера.</li>
+            </ul>
+            <form action="/gameshello/{{ id }}">
+                <button type="submit" class="w-100 btn btn-lg btn-primary">Перейти к заданиям</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Что? Где? Когда?</h4>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4">
+              <li> Испытайте себя в роли участника известной телеигры и попробуйте ответить на интересные вопросы из области кибербезопасности.</li>
+            </ul>
+            <form action="/gameseat/{{ id }}">
+                <button type="submit" class="w-100 btn btn-lg btn-primary">Перейти к заданиям</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Сейф</h4>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Ответьте на вопросы и узнайте, сможете ли вы уберечь свои персональные данные и средства так, как это делает сейф? </li>
+            </ul>
+            <form action="/gameswhat/{{ id }}">
+                <button type="submit" class="w-100 btn btn-lg btn-primary">Перейти к заданиям</button>
+            </form>
+          </div>
+        </div>
+      </div>
+</div>
+    <h2>Баллы: за первую игру {{user.answer1}}, за вторую игру {{user.answer2}}, за третью игру {{user.answer3}}</h2>
+    <h2>Рекомендации:</h2>
+    {% if user.answer < 10 %}
+        <h3>Вам нужно посетить сайт <a href="https://www.securitylab.ru/blog/personal/bezmaly/350620.php">securitylab</a></h3>
+    {% endif %}
+    {% if 10 <= user.answer <= 20 %}
+        <h3>У вас хороший результат, однако вы для расширения ваших знаний можете посетить сайт <a href="https://www.securitylab.ru/blog/personal/bezmaly/350620.php">securitylab</a></h3>
+    {% endif %}
+    {% if user.answer > 20 %}
+        <h3>У вас отличный результат, можете для общего ознакомления перейти на сайт <a href="https://www.securitylab.ru/blog/personal/bezmaly/350620.php">securitylab</a></h3>
+    {% endif %}
+</div>
+{% endblock %}

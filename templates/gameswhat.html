@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Сейф
+{% endblock %}
+
+{% block body %}
+<div class="conteiner mt-5">
+  <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94"
+                 role="img"></svg>
+            <span class="fs-5"><- Выйти</span>
+        </a>
+
+        <h1 ><font size="10"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;HARMLESS</font></h1>
+        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+            <a class="me-3 py-2 text-dark text-decoration-none" href="/tests/{{ id }}">Главная страница</a>
+        </nav>
+    </div>
+  <form method="post">
+      <h3>Кому можно сообщать код из СМС?</h3>
+      <h5>Варианты ответов:</h5>
+      <p>
+        <input type="radio" name="answer1" id="option11" value="1"> Никому </input><br>
+        <input type="radio" name="answer1" id="option12" value="2"> Родственникам и близким </input><br>
+        <input type="radio" name="answer1" id="option13" value="3"> Друзьям </input><br>
+          <input type="radio" name="answer1" id="option14" value="4"> Тому, кто попросит </input><br>
+        </p>
+      <h3>Что делать, если вам кажется, что вы говорите по телефону с мошенниками?</h3>
+      <h5>Варианты ответов:</h5>
+      <p>
+        <input type="radio" name="answer2" id="option21" value="1"> Ничего </input><br>
+        <input type="radio" name="answer2" id="option22" value="2"> Поделиться этой новостью с друзьями </input><br>
+        <input type="radio" name="answer2" id="option23" value="3"> Срочно выставить пост в социальных сетях об этом </input><br>
+          <input type="radio" name="answer2" id="option24" value="4"> Незамедлительно бросить трубку и позвонить в банк </input><br>
+        </p>
+      <h3>Что делать, если звонит «сотрудник банка» и просит установить какую-либо программу на моё устройство?</h3>
+      <h5>Варианты ответов:</h5>
+      <p>
+        <input type="radio" name="answer3" id="option31" value="1"> Бросить трубку и ничего не устанавливать </input><br>
+        <input type="radio" name="answer3" id="option32" value="2"> Не сопротивляться и установить всё, что требуют </input><br>
+        <input type="radio" name="answer3" id="option33" value="3"> Установить программу себе, родственникам и друзьям </input><br>
+          <input type="radio" name="answer3" id="option34" value="4"> Не знаю </input><br>
+        </p>
+      <h3>Мне предложили продать мою банковскую карту. Очень выгодное предложение, я могу на него согласиться?</h3>
+      <h5>Варианты ответов:</h5>
+      <p>
+        <input type="radio" name="answer4" id="option41" value="1"> Конечно да. Деньги лишними не бывают </input><br>
+        <input type="radio" name="answer4" id="option42" value="2"> Нет. Люди могут использовать мою карту в мошеннических целях </input><br>
+        <input type="radio" name="answer4" id="option43" value="3"> Если предлагают больше тысячи рублей, то да </input><br>
+          <input type="radio" name="answer4" id="option44" value="4"> Нет, не хочу продавать карту, но могу предложить это близким </input><br>
+        </p>
+      <h3> При оплате покупки на сайте я ввёл номер своей карты и CVV. Мне написали, что произошла ошибка. Для отмены операции просят сообщить СМС-код. Можно ли мне его отправить?</h3>
+      <h5>Варианты ответов:</h5>
+      <p>
+        <input type="radio" name="answer5" id="option51" value="1"> Да, конечно, произошла же ошибка </input><br>
+        <input type="radio" name="answer5" id="option52" value="2"> Не знаю </input><br>
+        <input type="radio" name="answer5" id="option53" value="3"> Нет, об этом просят только мошенники </input><br>
+          <input type="radio" name="answer5" id="option54" value="4"> Наверное да </input><br>
+        </p>
+      <h3> Мне пришло сообщение о том, что в честь моего дня рождения банк подготовил приз в виде бонусов или небольшой денежной суммы — я могу ввести данные карты для его получения?</h3>
+      <h5>Варианты ответов:</h5>
+      <p>
+        <input type="radio" name="answer6" id="option61" value="1"> Да, у меня же день рождения </input><br>
+        <input type="radio" name="answer6" id="option62" value="2"> Нет, это мошенники </input><br>
+        <input type="radio" name="answer6" id="option63" value="3"> Да, почему бы и нет </input><br>
+          <input type="radio" name="answer6" id="option64" value="4"> Нет, я и так богат </input><br>
+        </p>
+      <h3> Я потерял свою банковскую карту. Что мне делать?</h3>
+      <h5>Варианты ответов:</h5>
+      <p>
+        <input type="radio" name="answer7" id="option71" value="1"> Пожаловаться маме </input><br>
+        <input type="radio" name="answer7" id="option72" value="2"> Незамедлительно заблокировать карту </input><br>
+        <input type="radio" name="answer7" id="option73" value="3"> Ничего </input><br>
+          <input type="radio" name="answer7" id="option74" value="4"> Радоваться, потому что потеря денег является приметой того, что Вселенная благосклонна к человеку </input><br>
+        </p>
+      <h3>Со мной связались и предлагают инвестировать деньги. Обещают гарантированную прибыль в 10-20 и выше процентов в месяц. Мне соглашаться?</h3>
+      <h5>Варианты ответов:</h5>
+      <p>
+        <input type="radio" name="answer8" id="option81" value="1"> Ни в коем случае, это мошенники </input><br>
+        <input type="radio" name="answer8" id="option82" value="2"> Да, это очень выгодное предложение </input><br>
+        <input type="radio" name="answer8" id="option83" value="3"> Нет, 10 процентов прибыли в месяц это мало </input><br>
+          <input type="radio" name="answer8" id="option84" value="4"> Да, я слышал, что инвестиции - это круто </input><br>
+        </p>
+      <h3>Я увидел объявление о продаже недавно вышедшего телефона всего за 30.000 рублей. На официальном сайте он стоит 150.000 рублей. Покупать?</h3>
+      <h5>Варианты ответов:</h5>
+      <p>
+        <input type="radio" name="answer9" id="option91" value="1"> Да, могу купить его по объявлению и продать подороже </input><br>
+        <input type="radio" name="answer9" id="option92" value="2"> Да, экономия 120.000 рублей </input><br>
+        <input type="radio" name="answer9" id="option93" value="3"> Нет, это мошенники </input><br>
+          <input type="radio" name="answer9" id="option94" value="4"> Да, на официальном сайте я переплачу за бренд, а по объявлению куплю товар по себестоимости </input><br>
+        </p>
+      <h3>Мне с незнакомого номера предложили купить дополнительные ресурсы по сниженной цене в моей любимой онлайн-игре. Обещают большое преимущество над остальными игроками. Соглашаться?</h3>
+      <h5>Варианты ответов:</h5>
+      <p>
+        <input type="radio" name="answer10" id="option101" value="1"> Конечно да, я смогу быстро прокачаться и буду круче всех </input><br>
+        <input type="radio" name="answer10" id="option102" value="2"> Нет, это мошенники </input><br>
+        <input type="radio" name="answer10" id="option103" value="3"> Да, это ускорит игровой процесс </input><br>
+          <input type="radio" name="answer10" id="option104" value="4"> Надо посоветоваться с другом, который тоже увлекается этой игрой </input><br>
+        </p>
+      <h1><input type="submit" class="btn btn-success" value="Сохранить"></h1>
+    </form>
+</div>
+{% endblock %}
